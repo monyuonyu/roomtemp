@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<!-- EJSテンプレートエンジンの機能で ＜%= hoge %＞ などして使う hoge は nodejsがrenderを呼び出すときの引数として機能する -->
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+	<!-- JQuery, グラフ, 自分で定義したJavascriptを読み込み -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script type="text/javascript" src="javascripts/script.js"></script>
+    <script type="text/javascript" src="javascripts/highcharts.js"></script>
+  </head>
+  <body>
+
+	<script type="text/javascript">
+	</script>
+
+	<p><font color="red">↓ mongodb -> node.js -> ejsへ送られてきたデータを表示sample ↓</font></p>
+	
+	<!-- データベースに何もデータがないとココでエラーが出るから注意 -->
+	<h1>id = <%= data[0].id %>, temp = <%= data[0].temp %></h1>
+    <p>Welcome to <%= title %></p>
+
+	
+	<p><font color="red">↓ JQuery test ↓</font></p>
+    <p class="hoge1">最初から色が変わって見える!!</p>
+    <p class="hoge2">クリックするとバックグラウンドの色が変わります</p>
+    <p class="hoge3">クリックすると消えます</p>
+	<p class="hoge4">クリックするとhoge4クラスの中身が増えます</p>
+	<div class="ws_test">
+		<p>websocketを受信するとws_testクラスの中身が増えます</p>
+	</div>
+    
+    <div id="container" style="width: 1000px; height: 400px; margin: 0 auto"></div>
+    
+    
+    </body>
+</html>
